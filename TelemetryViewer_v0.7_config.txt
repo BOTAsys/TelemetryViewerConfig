@@ -1,0 +1,286 @@
+Telemetry Viewer v0.7 Settings
+
+GUI Settings:
+
+	tile column count = 7
+	tile row count = 7
+	time format = Only Time
+	show 24-hour time = false
+	show plot tooltips = true
+	smooth scrolling = true
+	show fps and period = false
+	chart index for benchmarks = -1
+	antialiasing level = 16
+
+Communication Settings:
+
+	port = UART: COM30
+	uart baud rate = 460800
+	tcp/udp port number = 8080
+	packet type = Binary
+	sample rate = 10000
+
+11 Data Structure Locations:
+
+	location = 1
+	binary processor = Bitfield: 8 Bits
+	name = status low
+	color = 0xFF0000
+	unit = 
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+	[0:0] = 0x008000 ok,0xFF0000 Sampling rate to high for baudrate
+	[1:1] = 0x008000 ok,0xFF0000 Range exceeded
+	[2:2] = 0x008000 ok,0xFF0000 Invalid measurements
+	[2:2] = 0x008000 ok,0xFF0000 Raw values enabled
+
+	location = 2
+	binary processor = Bitfield: 8 Bits
+	name = status high
+	color = 0xFF0000
+	unit = 
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 3
+	binary processor = float32 LSB First
+	name = Fx
+	color = 0x800000
+	unit = Newtons
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 7
+	binary processor = float32 LSB First
+	name = Fy
+	color = 0x008000
+	unit = Newtons
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 11
+	binary processor = float32 LSB First
+	name = Fz
+	color = 0x000080
+	unit = Newtons
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 15
+	binary processor = float32 LSB First
+	name = Mx
+	color = 0x800000
+	unit = Newton Meters
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 19
+	binary processor = float32 LSB First
+	name = My
+	color = 0x008000
+	unit = Newton Meters
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 23
+	binary processor = float32 LSB First
+	name = Mz
+	color = 0x000080
+	unit = Newton Meters
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 27
+	binary processor = float32 LSB First
+	name = timestamp
+	color = 0x808080
+	unit = random
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 31
+	binary processor = float32 LSB First
+	name = temperature
+	color = 0x808080
+	unit = celcius
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 35
+	binary processor = int16 LSB First
+	name = crc
+	color = 0x808080
+	unit = 
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+Checksum:
+
+	location = -1
+	checksum processor = null
+
+8 Charts:
+
+	chart type = Time Domain
+	top left x = 0
+	top left y = 0
+	bottom right x = 2
+	bottom right y = 1
+	normal datasets = 3
+	bitfield edge states = 
+	bitfield level states = 1[2:2]=1
+	duration type = Seconds
+	duration = 10.0
+	x-axis = Timestamps
+	autoscale y-axis minimum = true
+	manual y-axis minimum = -1.0
+	autoscale y-axis maximum = true
+	manual y-axis maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+	cached mode = false
+
+	chart type = Time Domain
+	top left x = 0
+	top left y = 2
+	bottom right x = 2
+	bottom right y = 3
+	normal datasets = 7
+	bitfield edge states = 
+	bitfield level states = 1[2:2]=1
+	duration type = Seconds
+	duration = 10.0
+	x-axis = Sample Count
+	autoscale y-axis minimum = true
+	manual y-axis minimum = -1.0
+	autoscale y-axis maximum = true
+	manual y-axis maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+	cached mode = false
+
+	chart type = Time Domain
+	top left x = 0
+	top left y = 4
+	bottom right x = 2
+	bottom right y = 5
+	normal datasets = 11
+	bitfield edge states = 
+	bitfield level states = 1[2:2]=1
+	duration type = Seconds
+	duration = 10.0
+	x-axis = Sample Count
+	autoscale y-axis minimum = true
+	manual y-axis minimum = -1.0
+	autoscale y-axis maximum = true
+	manual y-axis maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+	cached mode = false
+
+	chart type = Time Domain
+	top left x = 3
+	top left y = 0
+	bottom right x = 5
+	bottom right y = 1
+	normal datasets = 15
+	bitfield edge states = 
+	bitfield level states = 1[2:2]=1
+	duration type = Seconds
+	duration = 10.0
+	x-axis = Sample Count
+	autoscale y-axis minimum = true
+	manual y-axis minimum = -1.0
+	autoscale y-axis maximum = true
+	manual y-axis maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+	cached mode = false
+
+	chart type = Time Domain
+	top left x = 3
+	top left y = 2
+	bottom right x = 5
+	bottom right y = 3
+	normal datasets = 19
+	bitfield edge states = 
+	bitfield level states = 1[2:2]=1
+	duration type = Seconds
+	duration = 10.0
+	x-axis = Sample Count
+	autoscale y-axis minimum = true
+	manual y-axis minimum = -1.0
+	autoscale y-axis maximum = true
+	manual y-axis maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+	cached mode = false
+
+	chart type = Time Domain
+	top left x = 3
+	top left y = 4
+	bottom right x = 5
+	bottom right y = 5
+	normal datasets = 23
+	bitfield edge states = 
+	bitfield level states = 1[2:2]=1
+	duration type = Seconds
+	duration = 10.0
+	x-axis = Sample Count
+	autoscale y-axis minimum = true
+	manual y-axis minimum = -1.0
+	autoscale y-axis maximum = true
+	manual y-axis maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+	cached mode = false
+
+	chart type = Timeline
+	top left x = 0
+	top left y = 6
+	bottom right x = 5
+	bottom right y = 6
+	show = Timeline and Time
+	normal datasets = 
+	bitfield edge states = 
+	bitfield level states = 1[0:0]=1,1[1:1]=1,1[2:2]=1
+
+	chart type = Time Domain
+	top left x = 6
+	top left y = 0
+	bottom right x = 6
+	bottom right y = 6
+	normal datasets = 31
+	bitfield edge states = 
+	bitfield level states = 1[2:2]=1
+	duration type = Seconds
+	duration = 10.0
+	x-axis = Sample Count
+	autoscale y-axis minimum = false
+	manual y-axis minimum = 20.0
+	autoscale y-axis maximum = false
+	manual y-axis maximum = 40.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+	cached mode = false
