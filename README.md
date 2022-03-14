@@ -1,6 +1,13 @@
 ## Introduction ##
 This configuration file is intented to be used with TelemetryViewer V0.7. This software is a a cross-platform java software that can visualize data.
 
+---
+
+## NOTE: ##
+This repository has been moved to the [botasys gitlab group](https://gitlab.com/botasys/TelemetryViewerConfig) and will be deprecated eventually.
+
+---
+
 ## Installation ##
  - You will need to install [JRE](https://www.java.com/en/download/manual.jsp) (Java Runtime Environment) if you don't already have one. 
  - Download TelemetryViewer_v0.7.jar from the official [website](http://farrellf.com/TelemetryViewer/)
